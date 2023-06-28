@@ -21,7 +21,7 @@ public class RadioTest {
     public void shouldMaxStationByDefault() {
         Radio radio = new Radio();
 
-        Assertions.assertEquals(10, radio.getMaxStation());
+        Assertions.assertEquals(9, radio.getMaxStation());
 
     }
 
@@ -53,7 +53,7 @@ public class RadioTest {
     public void shouldNotSetStationAboveMaxByDefault() {
         Radio radio = new Radio();
 
-        radio.setCurrentStation(11);
+        radio.setCurrentStation(10);
 
         Assertions.assertEquals(0, radio.getCurrentStation());
     }
@@ -115,7 +115,7 @@ public class RadioTest {
     public void shouldNextStationAboveMaxByDefault() {
         Radio radio = new Radio();
 
-        radio.setCurrentStation(10);
+        radio.setCurrentStation(9);
         radio.nextStation();
 
         Assertions.assertEquals(0, radio.getCurrentStation());
@@ -180,10 +180,10 @@ public class RadioTest {
     public void shouldPrevStationBeforeMaxByDefault() {
         Radio radio = new Radio();
 
-        radio.setCurrentStation(10);
+        radio.setCurrentStation(9);
         radio.prevStation();
 
-        Assertions.assertEquals(9, radio.getCurrentStation());
+        Assertions.assertEquals(8, radio.getCurrentStation());
 
     }
 
@@ -205,7 +205,7 @@ public class RadioTest {
         radio.getMinStation();
         radio.prevStation();
 
-        Assertions.assertEquals(10, radio.getCurrentStation());
+        Assertions.assertEquals(9, radio.getCurrentStation());
 
     }
 

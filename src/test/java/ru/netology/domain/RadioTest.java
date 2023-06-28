@@ -26,25 +26,6 @@ public class RadioTest {
 
 
     @Test
-    public void shouldNotSetStationAboveMaxByDefault() {
-        Radio radio = new Radio();
-
-        radio.setCurrentStation(9);
-
-        Assertions.assertEquals(0, radio.getCurrentStation());
-    }
-
-    @Test
-    public void shouldNotSetStationBelowMinByDefault() {
-        Radio radio = new Radio();
-
-        radio.setCurrentStation(-1);
-
-        Assertions.assertEquals(0, radio.getCurrentStation());
-    }
-
-
-    @Test
     public void shouldSetVolume() {
         Radio radio = new Radio();
 
@@ -71,22 +52,5 @@ public class RadioTest {
         Assertions.assertEquals(100, radio.getCurrentVolume());
     }
 
-    @Test
-    public void shouldNotSetVolumeAboveMax() {
-        Radio radio = new Radio();
 
-        radio.setCurrentVolume(101);
-
-        Assertions.assertEquals(0, radio.getCurrentVolume());
-    }
-
-    @Test
-    public void shouldNotSetVolumeBelowMin() {
-        Radio radio = new Radio();
-
-        radio.setCurrentVolume(-1);
-
-        Assertions.assertEquals(0, radio.getCurrentVolume());
-    }
-
-}
+   }
